@@ -1,0 +1,14 @@
+#root {
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #1a1a1a;
+}
