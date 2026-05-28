@@ -73,7 +73,7 @@ function App() {
       padding: '40px 20px',
       boxSizing: 'border-box'
     }}>
-      <h1 style={{ color: '#fff', textShadow: '2px 2px 4px #000' }}>Saiyajins</h1>
+      <h1 style={{ color: '#fff', textShadow: '2px 2px 4px #000' }}>Dragon Ball</h1>
 
       <h2 style={{ color: '#fff', textShadow: '1px 1px 3px #000' }}>
         Quantidade de saiyajins evoluidos: {qtdEvoluidos}
