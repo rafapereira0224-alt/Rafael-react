@@ -99,37 +99,16 @@ function App() {
         gap: '15px' 
       }}>
         <button 
-          onClick={tocarMusica}
-          style={{
-            padding: '12px 24px',
-            backgroundColor: '#ff6f00', /* Laranja */
-            border: '2px solid #fff',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-            fontSize: '1rem',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-            textShadow: '1px 1px 2px #000'
-          }}
-        >
+  onClick={tocarMusica}
+  className="musicButton playButton"
+>
           ▶ Soltar o Som
         </button>
 
         <button 
-          onClick={pararMusica}
-          style={{
-            padding: '12px 24px',
-            backgroundColor: '#0d47a1', 
-            color: 'white',
-            border: '2px solid #fff',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-            fontSize: '1rem',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-            textShadow: '1px 1px 2px #000'
-          }}
-        >
+  onClick={pararMusica}
+  className="musicButton stopButton"
+>
           ■ Parar Música
         </button>
       </div>

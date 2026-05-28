@@ -180,19 +180,20 @@
 }
 
 .CardSaiyajin {
-  background-color: #ffffff; 
-  border-radius: 8px;        
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;        
   padding: 16px;             
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   text-align: center;      
   border: 1px solid #e0e0e0; 
   transition: transform 0.2s, box-shadow 0.2s;
   border: 2px solid #000000; 
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .CardSaiyajin:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
 }
 .CardSaiyajin h2 {
   color: #333333;
@@ -202,7 +203,7 @@
 
 .CardSaiyajin button {
   padding: 10px 20px;
-  background-color: #ff6f00; 
+  background: linear-gradient(135deg, #ff6f00, #ff9800);
   color: white;
   border: 2px solid white;
   border-radius: 8px;
@@ -211,11 +212,48 @@
   font-size: 1rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   text-shadow: 1px 1px 2px #000;
-  
+  position: relative;
+  overflow: hidden;
   transition: all 0.2s ease-in-out;
 }
 .CardSaiyajin button:hover {
-  transform: scale(1.05); 
-  background-color: #c62828; 
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4); 
+  transform: translateY(-3px) scale(1.06);
+  background-color: #c62828;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
 }
+
+.musicButton {
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px #000;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.musicButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.4);
+}
+
+.playButton {
+  background: linear-gradient(135deg, #ff6f00, #ff9800);
+}
+
+.stopButton {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+}
+
+.CardSaiyajin img {
+  transition: transform 0.3s ease;
+}
+
+.CardSaiyajin:hover img {
+  transform: scale(1.05);
+}
+
