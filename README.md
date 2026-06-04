@@ -1,16 +1,34 @@
-# React + Vite
+Dragon Ball Evolução 🐉
+🔗 Acesse o projeto online: https://rafapereira0224-alt.github.io/Rafael-react/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o meu primeiro projeto com React! O objetivo foi criar uma interface interativa onde é possível ver os personagens de Dragon Ball e evoluí-los clicando em um botão.
 
-Currently, two official plugins are available:
+🚀 Sobre o Projeto
+Desenvolvi este sistema para praticar meus conhecimentos em:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React: Componentes, Hooks (useState, useEffect) e renderização de listas.
 
-## React Compiler
+JavaScript: Manipulação de arrays de objetos.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+CSS: Estilização de layout e posicionamento.
 
-## Expanding the ESLint configuration
+🛠 Como rodar localmente
+Clone este repositório:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bash
+git clone [https://github.com/rafapereira0224-alt/Rafael-react.git](https://github.com/rafapereira0224-alt/Rafael-react.git)
+2. Entre na pasta do projeto:
+   ```bash
+   cd nome-da-pasta
+Instale as dependências:
+
+Bash
+npm install
+4. Inicie o projeto:
+   ```bash
+npm run dev
+📸 Demonstração
+<video src="/DragonBall.mp4" controls width="100%"></video>
+
+💡 Aprendizado
+Como este é meu primeiro repositório oficial, aprendi muito sobre como gerenciar o estado da aplicação e como o ciclo de vida do React funciona na prática.

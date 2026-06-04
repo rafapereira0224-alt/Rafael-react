@@ -1,8 +1,12 @@
-function SaiyajinCard({nome, caminhoImagem, estagio, evoluirSaiyajin}){
+import { Link } from 'react-router-dom';
+
+function SaiyajinCard({nome, caminhoImagem, estagio, evoluirSaiyajin, id}) {
     return (
          <div className='CardSaiyajin'>
             <div className="image-box">
-                <img src={caminhoImagem} width={200} height={240} alt={nome} title={nome}/>
+                <Link to={`/Rafael-react/${id}`}>
+  <img src={caminhoImagem} width={200} height={240} alt={nome} title={nome}/>
+</Link>
             </div>
             <h2>{nome}</h2>
             <p>Estágio: {estagio}</p>
@@ -10,4 +14,4 @@ function SaiyajinCard({nome, caminhoImagem, estagio, evoluirSaiyajin}){
          </div>
     )
 }
-export default SaiyajinCard
+export default SaiyajinCard;

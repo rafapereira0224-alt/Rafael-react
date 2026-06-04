@@ -1,0 +1,134 @@
+.container-detalhe-final {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 9999 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+
+.meu-card-bonito {
+  background: white !important;
+  padding: 40px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+  text-align: center !important;
+  width: 350px !important; 
+  max-width: 90% !important; 
+  z-index: 10000 !important;
+  color: black !important;
+  margin: 0 !important;
+}
+
+.meu-card-bonito img {
+  width: 200px !important;
+  height: auto !important;
+  margin: 10px auto !important;
+  display: block !important;
+}
+
+
+
+.container-detalhe-final {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 20px; 
+}
+
+
+.card-detalhe {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.card-detalhe:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+.card-detalhe img {
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover; 
+  object-position: center; 
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+
+.imagem-gif {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important; 
+  object-position: center;
+  display: block;
+}
+
+.card-conteudo {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.container-botoes {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 15px; 
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn-padrao {
+  width: 130px; 
+  height: 40px; 
+  padding: 0; 
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: flex;       
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-evoluir { background-color: #ff9800; }
+.btn-voltar { background-color: #333; }
+
+.btn-padrao:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+}
