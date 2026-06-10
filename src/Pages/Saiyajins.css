@@ -16,15 +16,14 @@
   overflow: hidden !important;
 }
 
-
 .meu-card-bonito {
   background: white !important;
   padding: 40px !important;
   border-radius: 20px !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
   text-align: center !important;
-  width: 350px !important; 
-  max-width: 90% !important; 
+  width: 350px !important;
+  max-width: 90% !important;
   z-index: 10000 !important;
   color: black !important;
   margin: 0 !important;
@@ -37,8 +36,6 @@
   display: block !important;
 }
 
-
-
 .container-detalhe-final {
   width: 100vw;
   min-height: 100vh;
@@ -49,9 +46,8 @@
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  padding: 20px; 
+  padding: 20px;
 }
-
 
 .card-detalhe {
   background: rgba(0, 0, 0, 0.6);
@@ -67,27 +63,25 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-
 .card-detalhe:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-5px);
 }
 
 .card-detalhe img {
-  width: 250px; 
-  height: 250px; 
-  object-fit: cover; 
-  object-position: center; 
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
   display: block;
   margin: 20px auto;
   border-radius: 10px;
 }
 
-
 .imagem-gif {
   width: 100% !important;
   height: 250px !important;
-  object-fit: cover !important; 
+  object-fit: cover !important;
   object-position: center;
   display: block;
 }
@@ -98,26 +92,25 @@
   width: 100%;
 }
 
-
 .container-botoes {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center;
-  gap: 15px; 
+  gap: 10px;
   margin-top: 20px;
   width: 100%;
 }
 
 .btn-padrao {
-  width: 130px; 
-  height: 40px; 
-  padding: 0; 
+  width: 130px;
+  height: 40px;
+  padding: 0;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  display: flex;       
+  display: flex;
   justify-content: center;
   align-items: center;
   color: white;
@@ -125,10 +118,26 @@
   font-size: 14px;
 }
 
-.btn-evoluir { background-color: #ff9800; }
-.btn-voltar { background-color: #333; }
+.btn-evoluir {
+  background-color: #ff9800;
+}
+.btn-voltar {
+  background-color: #333;
+}
 
 .btn-padrao:hover {
   transform: translateY(-3px) scale(1.06);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+.card-detalhe h1 {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 300px !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+  margin: 10px auto !important;
+  font-size: 36px !important;
+  line-height: 1.2 !important;
 }

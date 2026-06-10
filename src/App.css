@@ -57,14 +57,13 @@
 }
 
 #center {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  justify-content: center;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  justify-content: center !important;
   justify-items: center;
   flex-grow: 1;
   @media (max-width: 1024px) {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     padding: 32px 20px 24px;
     gap: 18px;
   }
@@ -166,7 +165,7 @@
   width: 100%;
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -182,14 +181,18 @@
 .CardSaiyajin {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 16px;        
-  padding: 16px;             
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  text-align: center;      
-  border: 1px solid #e0e0e0; 
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 2px solid #000000; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  border: 2px solid #000000;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .CardSaiyajin:hover {
   transform: translateY(-8px) scale(1.02);
@@ -210,7 +213,7 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 2px #000;
   position: relative;
   overflow: hidden;
@@ -219,7 +222,7 @@
 .CardSaiyajin button:hover {
   transform: translateY(-3px) scale(1.06);
   background-color: #c62828;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
 }
 
 .musicButton {
@@ -229,7 +232,7 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 2px #000;
   color: white;
 
@@ -238,7 +241,7 @@
 
 .musicButton:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 18px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
 }
 
 .playButton {
@@ -265,16 +268,18 @@
 
 .card-detalhe {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);         
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;      
-  height: 450px;      
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 350px;
+  height: 450px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card-detalhe:hover {
@@ -286,10 +291,40 @@
 .botao-evoluir:hover {
   transform: translateY(-3px) scale(1.06);
   background-color: #c62828;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+.container-filtros {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
+.btn-filtro {
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  border: 2px solid #ff6600;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
+.btn-filtro:hover {
+  background-color: #ff6600;
+  color: white;
+  transform: scale(1.1);
+}
+
+.btn-filtro.ativo {
+  background-color: #1a1a1a;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
