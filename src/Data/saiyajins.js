@@ -64,9 +64,9 @@ import coolerImagem from "../assets/cooler.gif";
 import coolerBg from "../assets/coolerBg.jpg";
 
 // goku black
-import gokuBlackPImagem from "../assets/gokuBlackP.gif";
-import gokuBlackImagem from "../assets/gokuBlack.gif";
-import gokuBlackBg from "../assets/gokuBlackBg.jpg";
+import gokuBlackPImagem from "../assets/gokublackP.gif";
+import gokuBlackImagem from "../assets/gokublack.gif";
+import gokuBlackBg from "../assets/gokublackBg.jpg";
 
 // zamasu fusao
 import zamasufusaoPImagem from "../assets/zamasufusaoP.gif";
