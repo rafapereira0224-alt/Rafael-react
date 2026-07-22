@@ -1,3 +1,174 @@
+:root,
+[data-theme="saiyajin"],
+[data-theme="todos"] {
+  --cor-fundo: #000000;
+  --cor-fundo-card: rgba(0, 0, 0, 0.6);
+  --cor-primaria: #ff9800;
+  --cor-acento: #ffcc00;
+  --cor-texto: #ffffff;
+  --cor-borda: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="classico"] {
+  --cor-fundo: #0d1b2a;
+  --cor-fundo-card: rgba(13, 27, 42, 0.7);
+  --cor-primaria: #1b4965;
+  --cor-acento: #62b6cb;
+  --cor-texto: #e0fbfc;
+  --cor-borda: rgba(98, 182, 203, 0.3);
+}
+
+[data-theme="saiyajins"] {
+  --cor-fundo: #1a0f00;
+  --cor-fundo-card: rgba(50, 25, 0, 0.7);
+  --cor-primaria: #e65100;
+  --cor-acento: #ff9100;
+  --cor-texto: #fff3e0;
+  --cor-borda: rgba(255, 145, 0, 0.3);
+}
+
+[data-theme="viloes"] {
+  --cor-fundo: #12001a;
+  --cor-fundo-card: rgba(30, 0, 45, 0.7);
+  --cor-primaria: #4a148c;
+  --cor-acento: #e040fb;
+  --cor-texto: #f3e5f5;
+  --cor-borda: rgba(224, 64, 251, 0.3);
+}
+
+[data-theme="freeza"] {
+  --cor-fundo: #1a0033;
+  --cor-fundo-card: rgba(40, 0, 60, 0.7);
+  --cor-primaria: #a020f0;
+  --cor-acento: #00ffff;
+  --cor-texto: #e0e0e0;
+  --cor-borda: rgba(0, 255, 255, 0.3);
+}
+
+[data-theme="cell"] {
+  --cor-fundo: #021a08;
+  --cor-fundo-card: rgba(0, 40, 15, 0.7);
+  --cor-primaria: #2e7d32;
+  --cor-acento: #76ff03;
+  --cor-texto: #e8f5e9;
+  --cor-borda: rgba(118, 255, 3, 0.3);
+}
+
+[data-theme="boo"] {
+  --cor-fundo: #2b001f;
+  --cor-fundo-card: rgba(60, 0, 45, 0.7);
+  --cor-primaria: #ad1457;
+  --cor-acento: #ff4081;
+  --cor-texto: #fce4ec;
+  --cor-borda: rgba(255, 64, 129, 0.3);
+}
+
+[data-theme="goku-black"] {
+  --cor-fundo: #080808;
+  --cor-fundo-card: rgba(20, 20, 20, 0.8);
+  --cor-primaria: #b71c1c;
+  --cor-acento: #ea80fc;
+  --cor-texto: #fafafa;
+  --cor-borda: rgba(234, 128, 252, 0.3);
+}
+
+[data-theme="torneio-do-poder"] {
+  --cor-fundo: #001e3d;
+  --cor-fundo-card: rgba(0, 30, 60, 0.7);
+  --cor-primaria: #0288d1;
+  --cor-acento: #00e5ff;
+  --cor-texto: #e1f5fe;
+  --cor-borda: rgba(0, 229, 255, 0.3);
+}
+
+[data-theme="gt"] {
+  --cor-fundo: #1c1c00;
+  --cor-fundo-card: rgba(45, 45, 0, 0.7);
+  --cor-primaria: #f57f17;
+  --cor-acento: #ffee58;
+  --cor-texto: #fffde7;
+  --cor-borda: rgba(255, 238, 88, 0.3);
+}
+
+[data-theme="filmes"] {
+  --cor-fundo: #1f0505;
+  --cor-fundo-card: rgba(50, 10, 10, 0.7);
+  --cor-primaria: #d32f2f;
+  --cor-acento: #ff5252;
+  --cor-texto: #ffebee;
+  --cor-borda: rgba(255, 82, 82, 0.3);
+}
+
+[data-theme="herois"] {
+  --cor-fundo: #002222;
+  --cor-fundo-card: rgba(0, 45, 45, 0.7);
+  --cor-primaria: #00838f;
+  --cor-acento: #1de9b6;
+  --cor-texto: #e0f2f1;
+  --cor-borda: rgba(29, 233, 182, 0.3);
+}
+
+[data-theme="favoritos"] {
+  --cor-fundo: #220022;
+  --cor-fundo-card: rgba(50, 0, 50, 0.7);
+  --cor-primaria: #880e4f;
+  --cor-acento: #ff80ab;
+  --cor-texto: #f8bbd0;
+  --cor-borda: rgba(255, 128, 171, 0.3);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--cor-fundo-card) !important;
+  backdrop-filter: blur(10px);
+  color: var(--cor-texto) !important;
+  border: 2px solid var(--cor-primaria) !important;
+  padding: 12px 45px 12px 20px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffcc00' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+}
+
+select:hover {
+  border-color: var(--cor-acento) !important;
+  box-shadow: 0 0 15px var(--cor-acento);
+  transform: translateY(-2px);
+}
+
+select option {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+select option:hover,
+select option:checked {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -180,35 +351,42 @@
 
 .CardSaiyajin {
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--cor-fundo-card); /* Fundo dinâmico */
   border-radius: 16px;
   padding: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   text-align: center;
-  border: 1px solid #e0e0e0;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-  border: 2px solid #000000;
+  border: 2px solid var(--cor-primaria); /* Borda dinâmica */
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
+
 .CardSaiyajin:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
+  border-color: var(--cor-acento); /* Brilho do hover segue o tema */
 }
+
 .CardSaiyajin h2 {
-  color: #333333;
+  color: var(--cor-texto); /* Texto dinâmico */
   margin-top: 12px;
   font-size: 1.2rem;
 }
 
+.CardSaiyajin p {
+  color: var(--cor-texto); /* Texto dinâmico */
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 8px 0;
+  letter-spacing: 0.5px;
+}
+
 .CardSaiyajin button {
   padding: 10px 20px;
-  background: linear-gradient(135deg, #ff6f00, #ff9800);
+  background: var(--cor-primaria);
   color: white;
-  border: 2px solid white;
+  border: 2px solid var(--cor-acento);
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
@@ -217,17 +395,18 @@
   text-shadow: 1px 1px 2px #000;
   position: relative;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
 }
+
 .CardSaiyajin button:hover {
   transform: translateY(-3px) scale(1.06);
-  background-color: #c62828;
+  filter: brightness(1.2);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
 }
 
 .musicButton {
   padding: 12px 24px;
-  border: 2px solid #fff;
+  border: 2px solid var(--cor-acento);
   border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
@@ -235,7 +414,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 2px #000;
   color: white;
-
   transition: all 0.3s ease;
 }
 
@@ -245,11 +423,12 @@
 }
 
 .playButton {
-  background: linear-gradient(135deg, #ff6f00, #ff9800);
+  background-color: var(--cor-primaria);
 }
 
 .stopButton {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background-color: var(--cor-acento);
+  color: #000;
 }
 
 .CardSaiyajin img {
@@ -267,6 +446,9 @@
 }
 
 .card-detalhe {
+  background: var(--cor-fundo-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--cor-borda);
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -305,26 +487,147 @@
 }
 
 .btn-filtro {
-  background-color: #ffcc00;
-  color: #1a1a1a;
-  border: 2px solid #ff6600;
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-primaria);
   padding: 10px 20px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .btn-filtro:hover {
-  background-color: #ff6600;
-  color: white;
-  transform: scale(1.1);
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-acento);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--cor-acento);
 }
 
 .btn-filtro.ativo {
-  background-color: #1a1a1a;
-  color: #ffcc00;
-  border: 2px solid #ffcc00;
+  background-color: #1a0033;
+  color: var(--cor-acento);
+  border: 2px solid var(--cor-acento);
+  font-weight: 900;
+  box-shadow: 0 0 10px var(--cor-acento);
+}
+
+.btn-filtro.ativo:hover {
+  background-color: #2a0050;
+  box-shadow: 0 0 15px var(--cor-acento);
+}
+
+@media (max-width: 768px) {
+  #center {
+    grid-template-columns: 1fr !important;
+    padding: 10px !important;
+  }
+
+  .card-detalhe {
+    width: 90% !important;
+    height: auto !important;
+    max-width: 320px !important;
+    padding: 20px !important;
+  }
+
+  .container-botoes {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .CardSaiyajin img,
+  .card-detalhe img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  #next-steps > div {
+    padding: 15px !important;
+  }
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 12px; 
+  text-align: center;
+  max-width: 600px;
+}
+
+.home-titulo {
+  color: var(--cor-texto);
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  margin: 0;
+}
+
+.home-subtitulo {
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+  opacity: 0.85;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.placar-evoluidos {
+  display: flex;
+  align-items: center;
+  background: var(--cor-fundo-card);
+  border: 2px solid var(--cor-primaria);
+  padding: 6px 16px;
+  border-radius: 30px;
+  color: var(--cor-texto);
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.placar-evoluidos strong {
+  color: var(--cor-acento);
+  margin-left: 6px;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background: var(--cor-fundo-card);
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: 2px solid var(--cor-borda);
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.barra-pesquisa.focada {
+  border-color: var(--cor-acento);
+  box-shadow: 0 0 15px var(--cor-acento);
+}
+
+.barra-pesquisa input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 220px;
+  background: transparent;
+  color: var(--cor-texto);
+  font-size: 1rem;
+}
+
+.barra-pesquisa input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.icone-busca {
+  color: var(--cor-acento);
+  margin-right: 10px;
 }

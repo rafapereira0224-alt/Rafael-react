@@ -10,16 +10,30 @@ function SaiyajinCard({
   isFavorito,
   toggleFavorito,
 }) {
+  const registrarClick = (destino) => {
+    console.log("Evento de clique enviado, destino:", destino);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "click",
+      destino: destino,
+    });
+  };
+
   return (
     <div className="CardSaiyajin">
       <div className="image-box">
-        <Link to={`/Rafael-react/${id}`}>
+        <Link
+          to={`/Rafael-react/${id}`}
+          onClick={() => registrarClick(nome)}
+          title={`Ir para a página de detalhes de ${nome}`}
+          aria-label={`Ir para a página de detalhes de ${nome}`}
+        >
           <img
             src={caminhoImagem}
             width={200}
             height={240}
             alt={nome}
-            title={nome}
+            loading="lazy"
           />
         </Link>
       </div>
@@ -35,15 +49,30 @@ function SaiyajinCard({
           marginTop: "10px",
         }}
       >
-        <motion.button 
-    whileTap={{ scale: 0.8 }}
-    onClick={() => evoluirSaiyajin(id)}
-  >
-    Evoluir
-  </motion.button>
+        <motion.button
+          whileTap={{ scale: 0.8 }}
+          onClick={() => {
+            registrarClick(`Evoluir: ${nome}`);
+            evoluirSaiyajin(id);
+          }}
+          title={`Evoluir o personagem ${nome}`}
+          aria-label={`Evoluir o personagem ${nome}`}
+        >
+          Evoluir
+        </motion.button>
 
         <button
           onClick={() => toggleFavorito(id)}
+          title={
+            isFavorito
+              ? `Remover ${nome} dos favoritos`
+              : `Adicionar ${nome} aos favoritos`
+          }
+          aria-label={
+            isFavorito
+              ? `Remover ${nome} dos favoritos`
+              : `Adicionar ${nome} aos favoritos`
+          }
           style={{
             cursor: "pointer",
             fontSize: "20px",
@@ -59,4 +88,5 @@ function SaiyajinCard({
     </div>
   );
 }
+
 export default SaiyajinCard;

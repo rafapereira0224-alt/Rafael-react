@@ -1,0 +1,85 @@
+.container-jukebox {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* O gradiente agora usa o fundo do tema */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+    url("/dragonball.webp");
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+  transition: all 0.5s ease;
+}
+
+.titulo-jukebox {
+  color: var(--cor-texto);
+  text-shadow: 0 0 10px var(--cor-acento);
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.link-voltar {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 2px solid var(--cor-acento);
+  margin-bottom: 40px;
+  transition: 0.3s ease;
+}
+
+.link-voltar:hover {
+  transform: scale(1.1);
+  background-color: var(--cor-acento);
+  color: #000;
+  box-shadow: 0 0 15px var(--cor-acento);
+}
+
+.grid-musicas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card-musica {
+  background: var(--cor-fundo-card);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid var(--cor-primaria);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-musica h3 { color: var(--cor-texto); }
+.card-musica p { color: var(--cor-acento); }
+
+.card-musica:hover {
+  transform: translateY(-5px);
+  border-color: var(--cor-acento);
+  box-shadow: 0 10px 25px var(--cor-acento);
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+  /* Filtro que funciona bem em qualquer tema */
+  filter: sepia(1) saturate(1) hue-rotate(280deg) brightness(0.8) invert(1);
+}
+
+/* Responsividade igual às anteriores */
+@media (max-width: 900px) { .grid-musicas { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { 
+  .titulo-jukebox { font-size: 2rem; } 
+  .grid-musicas { grid-template-columns: 1fr; } 
+}

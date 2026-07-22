@@ -115,3 +115,24 @@ code {
   width: 200px;
   border-radius: 10px;
 }
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 28px !important;
+    margin: 16px 0 !important;
+  }
+
+
+  .CardSaiyajin {
+    width: 90% !important;
+    max-width: 250px !important;
+    margin: 0 auto !important;
+  }
+
+
+  #root {
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+  }
+}

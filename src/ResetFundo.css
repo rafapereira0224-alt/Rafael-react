@@ -1,14 +1,15 @@
-#root {
-  display: block !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  max-width: 100% !important;
-  width: 100% !important;
-  min-height: 100vh !important;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-  background-color: #1a1a1a;
+#root {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
