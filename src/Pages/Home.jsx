@@ -52,7 +52,6 @@ function Home({
         transition: "background-color 0.5s ease",
       }}
     >
-      
       <select
         value={tema}
         onChange={(e) => alternarTema(e.target.value)}
@@ -170,7 +169,7 @@ function Home({
       </section>
 
       <br />
-      <Link to="/Rafael-react/musicas" className="link-jukebox">
+      <Link to="/musicas" className="link-jukebox">
         🎵 Ir para a Jukebox
       </Link>
     </main>
