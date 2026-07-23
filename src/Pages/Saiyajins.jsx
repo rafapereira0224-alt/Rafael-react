@@ -37,9 +37,7 @@ function Saiyajins({ listaSaiyajins, evoluirSaiyajin }) {
                 Evoluir
               </button>
             )}
-            <Link to="/" className="btn-padrao btn-voltar">
-              Voltar
-            </Link>
+              <Link to="/" className="btn-padrao btn-voltar">Voltar</Link>
           </div>
         </div>
       </div>

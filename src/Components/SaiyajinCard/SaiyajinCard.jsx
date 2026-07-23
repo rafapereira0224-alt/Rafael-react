@@ -23,7 +23,7 @@ function SaiyajinCard({
     <div className="CardSaiyajin">
       <div className="image-box">
         <Link
-          to={`/Rafael-react/${id}`}
+          to={`/${id}`}
           onClick={() => registrarClick(nome)}
           title={`Ir para a página de detalhes de ${nome}`}
           aria-label={`Ir para a página de detalhes de ${nome}`}
