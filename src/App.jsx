@@ -66,7 +66,7 @@ function App() {
       <AnalyticsTracker />
       <Routes>
         <Route
-          path="/Rafael-react/"
+          path="/"
           element={
             <Home
               listaSaiyajins={listaSaiyajins}
@@ -79,7 +79,7 @@ function App() {
           }
         />
         <Route
-          path="/Rafael-react/:saiyajinsId"
+          path="/:saiyajinsId"
           element={
             <Saiyajins
               listaSaiyajins={listaSaiyajins}
@@ -89,7 +89,7 @@ function App() {
             />
           }
         />
-        <Route path="/Rafael-react/musicas" element={<Musicas />} />
+        <Route path="/musicas" element={<Musicas />} />
       </Routes>
     </BrowserRouter>
   );
