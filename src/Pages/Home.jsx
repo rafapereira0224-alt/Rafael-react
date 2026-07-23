@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SaiyajinCard from "../Components/SaiyajinCard/SaiyajinCard";
 import fundoDBZ from "../assets/img-1031584-dragon-ball.jpg";
-import "../app.css";
+import "../App.css";
 import "../Components/SaiyajinButton/SaiyajinButton.css";
 import "../Components/Musica/BotaoJukebox.css";
 
