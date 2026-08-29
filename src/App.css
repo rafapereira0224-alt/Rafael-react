@@ -631,3 +631,15 @@ body {
   color: var(--cor-acento);
   margin-right: 10px;
 }
+
+button[style*="background-color: rgb(255, 204, 0)"], 
+button[style*="background-color: #ffcc00"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button[style*="background-color: rgb(255, 204, 0)"]:hover, 
+button[style*="background-color: #ffcc00"]:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6) !important;
+  filter: brightness(1.1);
+}

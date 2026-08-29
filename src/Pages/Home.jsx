@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SaiyajinCard from "../Components/SaiyajinCard/SaiyajinCard";
+import ConquistasModal from "../Components/ConquistasModal/ConquistasModal";
 import fundoDBZ from "../assets/img-1031584-dragon-ball.jpg";
 import "../App.css";
 import "../Components/SaiyajinButton/SaiyajinButton.css";
 import "../Components/Musica/BotaoJukebox.css";
+import { playSound } from "../soundEffects"; // <-- IMPORTADO AQUI
 
 function Home({
   listaSaiyajins,
@@ -15,11 +17,14 @@ function Home({
   toggleFavorito,
   alternarTema,
   tema,
+  unlockAchievement,
+  achievements,
 }) {
   const qtdEvoluidos = listaSaiyajins.filter((s) => s.estagio > 1).length;
   const [categoriaAtiva, setCategoriaAtiva] = useState("todos");
   const [termoBusca, setTermoBusca] = useState("");
   const [isFocused, setIsFocused] = useState(false);
+  const [modalConquistasAberto, setModalConquistasAberto] = useState(false);
 
   const listaFiltrada = listaSaiyajins.filter((s) => {
     const categoriaCorreta =
@@ -52,9 +57,36 @@ function Home({
         transition: "background-color 0.5s ease",
       }}
     >
+      {/* Botão de abrir Conquistas com som */}
+      <button
+        onClick={() => {
+          playSound("favorito");
+          setModalConquistasAberto(true);
+        }}
+        style={{
+          position: "fixed",
+          top: "20px",
+          left: "20px",
+          padding: "10px 15px",
+          borderRadius: "20px",
+          cursor: "pointer",
+          backgroundColor: "#ffcc00",
+          color: "#000",
+          fontWeight: "bold",
+          border: "2px solid #fff",
+          zIndex: 9999,
+          boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
+        }}
+      >
+        🏆 Troféus
+      </button>
+
       <select
         value={tema}
-        onChange={(e) => alternarTema(e.target.value)}
+        onChange={(e) => {
+          playSound("filtro");
+          alternarTema(e.target.value);
+        }}
         style={{
           position: "fixed",
           top: "20px",
@@ -97,6 +129,7 @@ function Home({
         </div>
       </header>
 
+      {/* Barra de pesquisa com som de giro/whoosh na lupa */}
       <div className={`barra-pesquisa ${isFocused ? "focada" : ""}`}>
         <motion.div
           animate={{ scale: isFocused ? 1.2 : 1, rotate: isFocused ? 360 : 0 }}
@@ -109,11 +142,15 @@ function Home({
           placeholder="Buscar personagem..."
           value={termoBusca}
           onChange={(e) => setTermoBusca(e.target.value)}
-          onFocus={() => setIsFocused(true)}
+          onFocus={() => {
+            playSound("pesquisa");
+            setIsFocused(true);
+          }}
           onBlur={() => setIsFocused(false)}
         />
       </div>
 
+      {/* Botões de filtro com som de clique */}
       <div className="container-filtros">
         {[
           { id: "todos", label: "TODOS" },
@@ -126,7 +163,10 @@ function Home({
         ].map((cat) => (
           <button
             key={cat.id}
-            onClick={() => setCategoriaAtiva(cat.id)}
+            onClick={() => {
+              playSound("filtro");
+              setCategoriaAtiva(cat.id);
+            }}
             className={`btn-filtro ${categoriaAtiva === cat.id ? "ativo" : ""}`}
           >
             {cat.label}
@@ -163,15 +203,27 @@ function Home({
               evoluirSaiyajin={() => evoluirSaiyajin(saiyajin.id)}
               isFavorito={favoritos.includes(saiyajin.id)}
               toggleFavorito={toggleFavorito}
+              unlockAchievement={unlockAchievement}
             />
           </motion.div>
         ))}
       </section>
 
       <br />
-      <Link to="/musicas" className="link-jukebox">
+      <Link to="/batalha" className="btn-padrao">⚔️ Ir para a Arena de Batalha</Link>
+      <Link
+        to="/musicas"
+        className="link-jukebox"
+        onClick={() => playSound("filtro")}
+      >
         🎵 Ir para a Jukebox
       </Link>
+
+      <ConquistasModal
+        isOpen={modalConquistasAberto}
+        onClose={() => setModalConquistasAberto(false)}
+        achievements={achievements}
+      />
     </main>
   );
 }

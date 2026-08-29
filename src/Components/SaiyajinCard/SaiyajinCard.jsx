@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { playSound } from "../../soundEffects";
 
 function SaiyajinCard({
   nome,
@@ -9,6 +10,7 @@ function SaiyajinCard({
   id,
   isFavorito,
   toggleFavorito,
+  unlockAchievement,
 }) {
   const registrarClick = (destino) => {
     console.log("Evento de clique enviado, destino:", destino);
@@ -24,7 +26,10 @@ function SaiyajinCard({
       <div className="image-box">
         <Link
           to={`/${id}`}
-          onClick={() => registrarClick(nome)}
+          onClick={() => {
+            playSound("filtro"); // Som de clique ao abrir detalhes
+            registrarClick(nome);
+          }}
           title={`Ir para a página de detalhes de ${nome}`}
           aria-label={`Ir para a página de detalhes de ${nome}`}
         >
@@ -54,6 +59,7 @@ function SaiyajinCard({
           onClick={() => {
             registrarClick(`Evoluir: ${nome}`);
             evoluirSaiyajin(id);
+            unlockAchievement("first_evolution");
           }}
           title={`Evoluir o personagem ${nome}`}
           aria-label={`Evoluir o personagem ${nome}`}
@@ -61,8 +67,18 @@ function SaiyajinCard({
           Evoluir
         </motion.button>
 
+        {/* Botão de Favoritar com som */}
         <button
-          onClick={() => toggleFavorito(id)}
+          onClick={() => {
+            console.log("Clicou no favorito do card!");
+            if (isFavorito) {
+              playSound("tirarFavorito");
+            } else {
+              playSound("favorito");
+            }
+            toggleFavorito(id);
+            unlockAchievement("favoriter");
+          }}
           title={
             isFavorito
               ? `Remover ${nome} dos favoritos`
