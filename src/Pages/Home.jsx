@@ -210,7 +210,9 @@ function Home({
       </section>
 
       <br />
-      <Link to="/batalha" className="btn-padrao">⚔️ Ir para a Arena de Batalha</Link>
+      <Link to="/batalha" className="btn-padrao">
+        ⚔️ Ir para a Arena de Batalha
+      </Link>
       <Link
         to="/musicas"
         className="link-jukebox"
