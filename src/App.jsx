@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Saiyajins from "./Pages/Saiyajins";
 import Musicas from "./Components/Musicas";
@@ -132,7 +132,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AnalyticsTracker />
 
       <AchievementToast
@@ -173,7 +173,7 @@ function App() {
           element={<Batalha listaSaiyajins={listaSaiyajins} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
